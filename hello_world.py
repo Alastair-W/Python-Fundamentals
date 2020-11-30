@@ -13,3 +13,19 @@ fave_food1 = "sushi"
 fave_food2 = "pizza"
 print( 'I love to eat {} and {}'.format(fave_food1, fave_food2)) # with .format()
 print( f'I love to eat {fave_food1} and {fave_food2}'  ) # with an f string
+
+
+my_name = 'Alastair'
+print('Hello', my_name,'!')
+print('Hello ' + my_name,'!')
+
+fav_num = 14
+print('Hello', fav_num,'!')
+# print('Hello ' + fav_num,'!')
+str_fav_num = str(fav_num)
+print ('Hello ' + str_fav_num, '!')
+
+my_food1 = 'potatoes'
+my_food2 = 'kale'
+print('I love to eat {} and {}'.format(my_food1, my_food2))
+print(f'I love to eat {my_food1} and {my_food2}')
