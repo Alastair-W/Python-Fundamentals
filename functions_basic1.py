@@ -51,17 +51,17 @@ print(a(2,5))
 # Answer: 25
 
 #8
-# def a():
-#     b = 100
-#     print(b)
-#     if b < 10:
-#         return 5
-#         else:
-# 		        return 10
-#     return 7
-# print(a())
+def a():
+    b = 100
+    print(b)
+    if b < 10:
+        return 5
+    else:
+		return 10
+    return 7
+print(a())
 
-# Answer: whitespace error
+# Answer: 100, 10
 
 #9
 def a(b,c):
