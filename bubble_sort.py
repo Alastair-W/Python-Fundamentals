@@ -1,4 +1,4 @@
-unsorted_list = [12,3,6,2,3,5,6,7,8]
+unsorted_list = [12,3,6,2,3,5,6,7,8]*400
 
 def bubble_sort(a_list):
     for j in range(len(a_list)-1):
@@ -12,5 +12,6 @@ def bubble_sort(a_list):
             # else:
             #     print("No Swap")
     return a_list
+print("Complete")
 
-print(bubble_sort(unsorted_list))
+bubble_sort(unsorted_list)

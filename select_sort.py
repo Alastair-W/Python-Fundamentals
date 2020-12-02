@@ -1,4 +1,4 @@
-sort_arr = [12,3,6,2,3,5,6,7,8]
+sort_arr = [12,3,6,2,3,5,6,7,8]*400
 
 def select_sort(sort_arr):
     for j in range(len(sort_arr)):
@@ -9,8 +9,9 @@ def select_sort(sort_arr):
             if sort_arr[x] < sort_arr[j]:
                 sort_arr[x], sort_arr[j] = sort_arr[j], sort_arr[x]
     return sort_arr
+print("Complete")
 
-print (select_sort(sort_arr))
+select_sort(sort_arr)
 
 
 # Alternative from Coding Dojo Solution
