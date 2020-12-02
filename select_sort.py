@@ -1,4 +1,4 @@
-sort_arr = [21,233,12,5,8,7,4]
+sort_arr = [12,3,6,2,3,5,6,7,8]
 
 def select_sort(sort_arr):
     for j in range(len(sort_arr)):
