@@ -23,7 +23,7 @@ z = [ {'x': 10, 'y': 20} ]
 # sports_directory['soccer'][0] = 'Andres'
 # print(sports_directory)
 #OR
-# for x in range(0, len(sports_directory['soccer']), 1):
+# for x in range(len(sports_directory['soccer'])):
 #     if sports_directory['soccer'][x] == 'Messi':
 #             sports_directory['soccer'][x] = 'Andres'
 # print(sports_directory)
@@ -32,7 +32,7 @@ z = [ {'x': 10, 'y': 20} ]
 # z[0]['y'] = 20
 # print(z)
 # OR
-# for i in range(0, len(z[0]), 1):
+# for i in range(len(z[0]):
 #     if i == 20:
 #         i = 30
 # print (z)
@@ -92,7 +92,7 @@ def printInfo(dict):
     for k in dict:
         print()
         print(len(dict[k]), k.upper())
-        for v in range(0, len(dict[k]), 1):
+        for v in range(len(dict[k])):
             print(dict[k][v])
 
 printInfo(dojo)
