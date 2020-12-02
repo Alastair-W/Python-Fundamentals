@@ -1,6 +1,18 @@
-def invoker(callback):
-    # invoke the input pass the argument 2
-    print(callback(2))
-invoker(lambda x: 2 * x)
-invoker(lambda y: 5 + y)
-
+my_list = [99,4,2,5,-3]
+my_tuple = (99,4,2,5,-3)
+my_str = "sequoia"
+print(my_list[:])
+# output: [99,4,2,5,-3]
+print(my_tuple[1:])
+# output: (4,2,5,-3)
+print(my_str[:3])
+# output: "seq"
+print(my_tuple[2:4])
+# output: (2,5)
+print(my_list, my_tuple, my_str)
+# output: [99,4,2,5,-3] (99,4,2,5,-3) 'sequoia' -- note the original values have not changed
+x = max(my_list)
+print(x)
+print(min(my_tuple))
+y = sorted(my_str)
+print(y)
