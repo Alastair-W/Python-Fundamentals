@@ -9,7 +9,11 @@ class User:		# here's what we have so far
     def make_withdrawal(self, amount):
         self.account_balance -= amount
     def display_user_balance(self):
-        self.account_balance
+        return f"User: {self.name}, Balance: {self.account_balance}"
+    def transfer_money(self, other_user, amount):
+        self.make_withdrawal(amount)
+        other_user.make_deposit(amount)
+        
 
 
 
@@ -21,3 +25,8 @@ guido.make_deposit(200)
 monty.make_deposit(50)
 print(guido.account_balance)	# output: 300
 print(monty.account_balance)	# output: 50
+guido.make_withdrawal(20)
+print(guido.display_user_balance())	# output: Guido, 280
+guido.transfer_money(monty, 25)
+print(guido.display_user_balance())
+print(monty.display_user_balance())
