@@ -1,18 +1,22 @@
-my_list = [99,4,2,5,-3]
-my_tuple = (99,4,2,5,-3)
-my_str = "sequoia"
-print(my_list[:])
-# output: [99,4,2,5,-3]
-print(my_tuple[1:])
-# output: (4,2,5,-3)
-print(my_str[:3])
-# output: "seq"
-print(my_tuple[2:4])
-# output: (2,5)
-print(my_list, my_tuple, my_str)
-# output: [99,4,2,5,-3] (99,4,2,5,-3) 'sequoia' -- note the original values have not changed
-x = max(my_list)
-print(x)
-print(min(my_tuple))
-y = sorted(my_str)
-print(y)
+def count_positives(arr):
+    sum = 0
+    for index, item in enumerate(arr):
+        if item > 0:
+            sum = sum + 1
+    arr[-1] = sum
+    return print(arr)
+
+count_positives([-1,1,1,1])
+count_positives([1,6,-4,-2,-7,-2])
+
+
+# def count_positives(arr):
+#     sum = 0
+#     for i in arr:
+#         print(i)
+#         if i > 0:
+#             sum += 1
+#     arr[-1] = sum
+#     return arr
+
+# print(count_positives([1,6,-4,-2,-7,-2]))
