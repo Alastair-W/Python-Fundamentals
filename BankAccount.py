@@ -58,4 +58,4 @@ class BankAccount:
 guido = User('Guido', 'guido@email.com')
 
 
-guido.make_deposit(100).make_withdrawal(10).display_user_balance()
+guido.make_deposit(-100).make_withdrawal(10).display_user_balance()
