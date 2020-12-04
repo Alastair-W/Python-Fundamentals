@@ -9,6 +9,7 @@ class Store:
     def sell_product(self, id):
         self.id = id
         self.list.remove(self.list[id])
+        print(self.list[id])
         return self
     def inflation(self, percent_increase):
         self.percent_increase = percent_increase
