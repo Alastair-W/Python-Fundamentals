@@ -19,6 +19,7 @@ class SLList:
         new_node.next = current_head
         #set the list's head to the new node
         self.head = new_node
+        return self
     def print_values(self):
         #as self.head is going to repeated throughout the code block set it as a variable called 'runner'
         #self.head is also the first node which is where we want to start
@@ -52,6 +53,7 @@ class SLList:
         # print("You have just removed {} from the list".format(removedValue))
         print(f"You have just removed {removedValue} from the list")
         self.print_values()
+        return self
     def remove_from_back(self):
         runner = self.head
         while runner.next != None:
@@ -61,6 +63,7 @@ class SLList:
         removedValue = runner.value
         print(f"You have just removed {removedValue} from the list")
         self.print_values()
+        return self
     def remove_val(self, val):
         if self.head.value == val:
             self.remove_from_front()
@@ -77,6 +80,7 @@ class SLList:
                 removedValue = runner.value
                 print(f"You have just removed {removedValue} from the list")
             self.print_values()
+        return self
     def insert_at(self, val, n):
         if n == 0:
             self.addToFront(val)
@@ -102,7 +106,7 @@ class SLList:
             if count < n:
                 print(f'The list only has {count} items so this index is out of range')
                 self.print_values()
-            
+        return self
 
 
 
@@ -110,13 +114,13 @@ class SLList:
 
 
 my_list = SLList()
-my_list.addToFront('Jim')
-my_list.addToFront('Dwight')
-my_list.addToFront('Andy')
-my_list.addToFront('Pam')
-my_list.addToFront('Michael')
-my_list.addToBack('Kelly')
-# Print full list
+my_list.addToFront('Jim').addToFront('Dwight').addToFront('Andy').addToFront('Pam').addToFront('Michael').addToBack('Kelly')
+# my_list.addToFront('Dwight')
+# my_list.addToFront('Andy')
+# my_list.addToFront('Pam')
+# my_list.addToFront('Michael')
+# my_list.addToBack('Kelly')
+# # Print full list
 my_list.print_values()
 # Remove first in list (Michael), left with Pam, Andy, Dwight, Jim, Kelly
 my_list.remove_from_front()
