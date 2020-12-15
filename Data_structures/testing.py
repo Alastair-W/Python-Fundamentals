@@ -1,5 +1,4 @@
 # Singly Linked List
-import re
 #class to create a new node
 class SLNode:
     def __init__(self, value):
@@ -52,7 +51,58 @@ class SLList:
         removedValue = current_head.value
         # print("You have just removed {} from the list".format(removedValue))
         print(f"You have just removed {removedValue} from the list")
-        # current_head = None
+        self.print_values()
+    def remove_from_back(self):
+        runner = self.head
+        while runner.next != None:
+            previous = runner
+            runner = runner.next
+        previous.next = None
+        removedValue = runner.value
+        print(f"You have just removed {removedValue} from the list")
+        self.print_values()
+    def remove_val(self, val):
+        if self.head.value == val:
+            self.remove_from_front()
+        else:
+            runner = self.head
+            while runner.value != val:
+                previous = runner
+                runner = runner.next
+            if runner.next == None:
+                    self.remove_from_back()
+            elif runner.next != None:
+                previous.next = runner.next
+                runner.next = None
+                removedValue = runner.value
+                print(f"You have just removed {removedValue} from the list")
+            self.print_values()
+    def insert_at(self, val, n):
+        if n == 0:
+            self.addToFront(val)
+        elif n < 0:
+            print('Only positive integers are accepted')
+        else:
+            count = 1
+            runner = self.head
+            while runner.next != None:
+                if n == count:
+                    # print(runner.value)
+                    # print(runner.next.value)
+                    new_node = SLNode(val)
+                    current_next = runner.next
+                    runner.next = new_node
+                    new_node.next = current_next
+                    print(f'{new_node.value} has been added to index {count}')
+                    self.print_values()
+                    break
+                else:
+                    count += 1
+                    runner = runner.next
+            if count < n:
+                print(f'The list only has {count} items so this index is out of range')
+                self.print_values()
+            
 
 
 
@@ -63,8 +113,20 @@ my_list = SLList()
 my_list.addToFront('Jim')
 my_list.addToFront('Dwight')
 my_list.addToFront('Andy')
-#print out all of the 'value' attributes for each instance of the class added to the list (my_list)
+my_list.addToFront('Pam')
+my_list.addToFront('Michael')
+my_list.addToBack('Kelly')
+# Print full list
 my_list.print_values()
-# print(my_list.head.next)
+# Remove first in list (Michael), left with Pam, Andy, Dwight, Jim, Kelly
 my_list.remove_from_front()
-my_list.print_values()
+# Remove last in list (Kelly), left with Pam, Andy, Dwight, Jim
+my_list.remove_from_back()
+# Remove node with value of 'Andy', left with Pam, Andy, Jim
+my_list.remove_val('Dwight')
+# Add a new node with value of 'Stanley' to index 1, left with Pam, Stanley, Andy, Jim
+my_list.insert_at('Stanley', 1)
+# Add a new node with value of 'Erin' to the last index (3), left with Pam, Stanley, Andy, Jim, Erin
+my_list.insert_at('Erin', 3)
+
+# my_list.print_values()
