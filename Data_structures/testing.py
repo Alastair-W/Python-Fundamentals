@@ -112,15 +112,11 @@ class SLList:
 
 
 
-
+# Create list
 my_list = SLList()
+# Test out functions to add and remove nodes
 my_list.addToFront('Jim').addToFront('Dwight').addToFront('Andy').addToFront('Pam').addToFront('Michael').addToBack('Kelly')
-# my_list.addToFront('Dwight')
-# my_list.addToFront('Andy')
-# my_list.addToFront('Pam')
-# my_list.addToFront('Michael')
-# my_list.addToBack('Kelly')
-# # Print full list
+# Print full list
 my_list.print_values()
 # Remove first in list (Michael), left with Pam, Andy, Dwight, Jim, Kelly
 my_list.remove_from_front()
