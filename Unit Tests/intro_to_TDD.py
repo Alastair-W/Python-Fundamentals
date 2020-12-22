@@ -161,6 +161,13 @@ def fibonacci(n):
             fibList.append(fibList[i] + fibList[i-1])
         return fibList[-1]
 
+# Using recursion
+# def fibonacci(first, second):
+#     print(first)
+#     if first > 100:
+#         return first
+#     return fibonacci(first + second, first)
+
 
 class fibonacciTest(unittest.TestCase):
     def testCorrect(self):

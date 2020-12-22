@@ -2,8 +2,8 @@
 
 x = [ [5,2,3], [10,8,9] ] 
 students = [
-     {'first_name':  'Michael', 'last_name' : 'Jordan'},
-     {'first_name' : 'John', 'last_name' : 'Rosales'}
+    {'first_name':  'Michael', 'last_name' : 'Jordan'},
+    {'first_name' : 'John', 'last_name' : 'Rosales'}
 ]
 sports_directory = {
     'basketball' : ['Kobe', 'Jordan', 'James', 'Curry'],
@@ -12,30 +12,30 @@ sports_directory = {
 z = [ {'x': 10, 'y': 20} ]
 
 # Change the value 10 in x to 15. Once you're done, x should now be [ [5,2,3], [15,8,9] ]. 
-# (x[1][0]) = 15
-# print(x)
+(x[1][0]) = 15
+print(x)
 
 # Change the last_name of the first student from 'Jordan' to 'Bryant'
-# students[0]['last_name'] = 'Bryant'
-# print(students)
+students[0]['last_name'] = 'Bryant'
+print(students)
 
 # In the sports_directory, change 'Messi' to 'Andres'
 # sports_directory['soccer'][0] = 'Andres'
 # print(sports_directory)
 #OR
-# for x in range(len(sports_directory['soccer'])):
-#     if sports_directory['soccer'][x] == 'Messi':
-#             sports_directory['soccer'][x] = 'Andres'
-# print(sports_directory)
+for x in range(len(sports_directory['soccer'])):
+    if sports_directory['soccer'][x] == 'Messi':
+            sports_directory['soccer'][x] = 'Andres'
+print(sports_directory)
 
 # Change the value 20 in z to 30
-# z[0]['y'] = 20
-# print(z)
-# OR
-# for i in range(len(z[0]):
-#     if i == 20:
-#         i = 30
-# print (z)
+z[0]['y'] = 20
+print(z)
+OR
+for i in range(len(z[0]):
+    if i == 20:
+        i = 30
+print (z)
 
 
 # Iterate Through a List of Dictionaries
@@ -59,22 +59,22 @@ students = [
 
 # print(len(students), len(students[0]))
 
-# def iterateDictionary(students):
-#     for i in students:
-#         print(f'first_name - ', i['first_name']+",", 'last_name - ', i['last_name'])
+def iterateDictionary(students):
+    for i in students:
+        print(f'first_name - ', i['first_name']+",", 'last_name - ', i['last_name'])
         
-# iterateDictionary(students)
+iterateDictionary(students)
 
 # Get Values From a List of Dictionaries
 # Create a function iterateDictionary2(key_name, some_list) that, given a list of dictionaries and a key name, 
 # the function prints the value stored in that key for each dictionary. 
 # For example, iterateDictionary2('first_name', students) should output:
 
-# def iterateDictionary2(input, students):
-#     for i in range(0, len(students), 1):
-#         print(students[i][input])
+def iterateDictionary2(input, students):
+    for i in range(0, len(students), 1):
+        print(students[i][input])
     
-# iterateDictionary2('last_name', students)
+iterateDictionary2('last_name', students)
 
 
 
